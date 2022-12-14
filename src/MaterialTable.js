@@ -6,7 +6,7 @@ function getMonths(data){
   return [... new Set(data.map(cust => cust.data.map(dta => dta.month).concat(getMonths(cust.childs))).flat())];  
 };
 
-const App = () => {
+const MaterialTable = () => {
   let monthHeaders = getMonths(data).map(month => {
     return {
       header: month,
@@ -53,4 +53,4 @@ const App = () => {
   return <MaterialReactTable columns={columns} data={data} enableExpanding getSubRows={(originalRow) => originalRow.childs}/>;
 };
 
-export default App;
+export default MaterialTable;
