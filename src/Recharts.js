@@ -47,7 +47,6 @@ export default function RenderLineChart() {
         <XAxis dataKey="month" strokeDasharray="3 3" />
         <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
         <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
-        <Tooltip />
         <Legend />
         <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" label={{position: 'top', formatter: formatter}}/>
         <Line yAxisId="left" type="monotone" dataKey="diy" stroke="#82ca9d" />
