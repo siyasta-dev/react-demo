@@ -7,8 +7,7 @@ import {
   Tooltip,
   Legend,
   Line,
-  ComposedChart,
-  LabelList
+  ComposedChart
 } from "recharts";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
@@ -22,6 +21,7 @@ export default function RenderLineChart() {
         setCompanyData(event.target.value);
 
     };
+    let formatter = (label) => {return label + "%"}
     return (
         <div>
             <Select
@@ -45,13 +45,11 @@ export default function RenderLineChart() {
         >
         <CartesianGrid stroke="#f5f5f5" />
         <XAxis dataKey="month" strokeDasharray="3 3" />
-        <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" />
-        <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" />
+        <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} />
+        <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" tickFormatter={formatter} />
         <Tooltip />
         <Legend />
-        <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" >
-            <LabelList dataKey="ppf" position="top" />
-        </Bar>
+        <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" label={{position: 'top', formatter: formatter}}/>
         <Line yAxisId="left" type="monotone" dataKey="diy" stroke="#82ca9d" />
         <Line yAxisId="left" type="monotone" dataKey="nps" stroke="#ff7300" />
         </ComposedChart>
