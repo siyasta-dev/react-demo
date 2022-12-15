@@ -45,8 +45,8 @@ export default function RenderLineChart() {
         >
         <CartesianGrid stroke="#f5f5f5" />
         <XAxis dataKey="month" strokeDasharray="3 3" />
-        <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} />
-        <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" tickFormatter={formatter} />
+        <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
+        <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
         <Tooltip />
         <Legend />
         <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" label={{position: 'top', formatter: formatter}}/>
