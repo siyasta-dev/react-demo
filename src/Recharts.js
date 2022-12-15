@@ -40,6 +40,7 @@ export default function RenderLineChart() {
                 bottom: 20,
                 left: 20,
                 }}
+                barSize={20}
             >
             <XAxis dataKey="month" strokeDasharray="3 3" />
             <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
