@@ -7,7 +7,8 @@ import {
   Tooltip,
   Legend,
   Line,
-  ComposedChart
+  ComposedChart,
+  LabelList
 } from "recharts";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
@@ -43,12 +44,14 @@ export default function RenderLineChart() {
             }}
         >
         <CartesianGrid stroke="#f5f5f5" />
-        <XAxis dataKey="month" />
-        <YAxis yAxisId="left" />
-        <YAxis yAxisId="right" orientation="right" />
+        <XAxis dataKey="month" strokeDasharray="3 3" />
+        <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" />
+        <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" />
         <Tooltip />
         <Legend />
-        <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" />
+        <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" >
+            <LabelList dataKey="ppf" position="top" />
+        </Bar>
         <Line yAxisId="left" type="monotone" dataKey="diy" stroke="#82ca9d" />
         <Line yAxisId="left" type="monotone" dataKey="nps" stroke="#ff7300" />
         </ComposedChart>
