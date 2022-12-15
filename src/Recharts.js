@@ -43,8 +43,8 @@ export default function RenderLineChart() {
                 barSize={30}
             >
             <XAxis dataKey="month" strokeDasharray="3 3" />
-            <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} />
-            <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} />
+            <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
+            <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
             <Legend formatter={(value) => value.toUpperCase()}/>
             <Tooltip formatter={(val, name) => [val, name.toUpperCase()]} />
             <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" unit="%" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
