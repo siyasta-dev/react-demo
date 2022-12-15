@@ -6,7 +6,8 @@ import {
   Legend,
   Line,
   ComposedChart,
-  ResponsiveContainer
+  ResponsiveContainer,
+  Tooltip
 } from "recharts";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
@@ -20,7 +21,6 @@ export default function RenderLineChart() {
         setCompanyData(event.target.value);
 
     };
-    let formatter = (label) => {return label + "%"}
     return (
         <div>
             <Select
@@ -43,12 +43,13 @@ export default function RenderLineChart() {
                 barSize={20}
             >
             <XAxis dataKey="month" strokeDasharray="3 3" />
-            <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
-            <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" tickFormatter={formatter} tickLine={false} />
+            <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} />
+            <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} />
             <Legend formatter={(value) => value.toUpperCase()}/>
-            <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" label={{position: 'top', formatter: formatter}}/>
-            <Line yAxisId="left" type="monotone" dataKey="diy" stroke="#82ca9d" />
-            <Line yAxisId="left" type="monotone" dataKey="nps" stroke="#ff7300" />
+            <Tooltip />
+            <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" unit="%" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
+            <Line yAxisId="left" type="monotone" dataKey="diy" unit="%" stroke="#82ca9d" />
+            <Line yAxisId="left" type="monotone" dataKey="nps" unit="%" stroke="#ff7300" />
             </ComposedChart>
         </ResponsiveContainer>
         </div>
