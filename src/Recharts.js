@@ -44,12 +44,13 @@ export default function RenderLineChart() {
         >
         <CartesianGrid stroke="#f5f5f5" />
         <XAxis dataKey="month" />
-        <YAxis />
+        <YAxis yAxisId="left" />
+        <YAxis yAxisId="right" orientation="right" />
         <Tooltip />
         <Legend />
-        <Bar dataKey="ppf" fill="#8884d8" />
-        <Line type="monotone" dataKey="diy" stroke="#82ca9d" />
-        <Line type="monotone" dataKey="nps" stroke="#ff7300" />
+        <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" />
+        <Line yAxisId="left" type="monotone" dataKey="diy" stroke="#82ca9d" />
+        <Line yAxisId="left" type="monotone" dataKey="nps" stroke="#ff7300" />
         </ComposedChart>
         </div>
     );
