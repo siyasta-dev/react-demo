@@ -53,8 +53,8 @@ export default function RenderLineChart() {
                 <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
                 <Legend formatter={(value) => value.toUpperCase()} verticalAlign="top" />
                 <Tooltip formatter={(val, name) => [val, name.toUpperCase()]} />
-                <Line yAxisId="left" type="monotone" dataKey="diy" unit="%" stroke="#82ca9d" />
-                <Line yAxisId="left" type="monotone" dataKey="nps" unit="%" stroke="#ff7300" />
+                <Line yAxisId="left" type="monotone" dataKey="diy" unit="%" stroke="#82ca9d" strokeWidth={5} />
+                <Line yAxisId="left" type="monotone" dataKey="nps" unit="%" stroke="#ff7300" strokeWidth={5} />
                 <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" unit="%" tooltipType="none" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
                 <Bar yAxisId="right" dataKey="fd" fill="#ff7300" unit="%" tooltipType="none" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
             </ComposedChart>
