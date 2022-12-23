@@ -7,7 +7,8 @@ import {
   Line,
   ComposedChart,
   ResponsiveContainer,
-  Tooltip
+  Tooltip,
+  Label
 } from "recharts";
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
@@ -44,7 +45,11 @@ export default function RenderLineChart() {
                 barGap={0}
             >
                 <XAxis dataKey="month" strokeDasharray="3 3" tickLine={false} angle={-90} tickMargin={30} tickFormatter={(tick) => (tick.split(" ")[0])} />
-                <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
+                <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} >
+                    <Label style={{ fontWeight: 'bold' }} angle={-90} position="insideLeft">
+                        Customers
+                    </Label>
+                </YAxis>
                 <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
                 <Legend formatter={(value) => value.toUpperCase()} verticalAlign="top" />
                 <Tooltip formatter={(val, name) => [val, name.toUpperCase()]} />
