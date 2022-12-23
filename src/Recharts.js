@@ -41,15 +41,17 @@ export default function RenderLineChart() {
                 left: 20,
                 }}
                 barSize={30}
+                barGap={0}
             >
-            <XAxis dataKey="month" strokeDasharray="3 3" tickLine={false} angle={-90} tickMargin={30} tickFormatter={(tick) => (tick.split(" ")[0])} />
-            <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
-            <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
-            <Legend formatter={(value) => value.toUpperCase()} verticalAlign="top" />
-            <Tooltip formatter={(val, name) => [val, name.toUpperCase()]} />
-            <Line yAxisId="left" type="monotone" dataKey="diy" unit="%" stroke="#82ca9d" />
-            <Line yAxisId="left" type="monotone" dataKey="nps" unit="%" stroke="#ff7300" />
-            <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" unit="%" tooltipType="none" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
+                <XAxis dataKey="month" strokeDasharray="3 3" tickLine={false} angle={-90} tickMargin={30} tickFormatter={(tick) => (tick.split(" ")[0])} />
+                <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
+                <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
+                <Legend formatter={(value) => value.toUpperCase()} verticalAlign="top" />
+                <Tooltip formatter={(val, name) => [val, name.toUpperCase()]} />
+                <Line yAxisId="left" type="monotone" dataKey="diy" unit="%" stroke="#82ca9d" />
+                <Line yAxisId="left" type="monotone" dataKey="nps" unit="%" stroke="#ff7300" />
+                <Bar yAxisId="right" dataKey="ppf" fill="#8884d8" unit="%" tooltipType="none" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
+                <Bar yAxisId="right" dataKey="fd" fill="#ff7300" unit="%" tooltipType="none" label={{position: "top", formatter: (lbl) => (lbl + "%")}} />
             </ComposedChart>
         </ResponsiveContainer>
         </div>

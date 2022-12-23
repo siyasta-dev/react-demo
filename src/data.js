@@ -6,48 +6,56 @@ const data = [
           month: "Jan 2020",
           nps: 20.7,
           ppf: 1.9,
+          fd: 1.9,
           diy: 14.1
         },
         {
           month: "Feb 2020",
           nps: 76.7,
           ppf: 9.9,
+          fd: 1.9,
           diy: 74.1
         },
         {
           month: "Mar 2020",
           nps: 10.7,
           ppf: 6.9,
+          fd: 1.9,
           diy: 54.1
         },
         {
           month: "Apr 2020",
           nps: 88.7,
           ppf: 2.9,
+          fd: 1.9,
           diy: 92.1
         },
         {
           month: "May 2020",
           nps: 59.7,
           ppf: 3.9,
+          fd: 1.9,
           diy: 37.1
         },
         {
           month: "Jun 2020",
           nps: 16.7,
           ppf: 4.9,
+          fd: 1.9,
           diy: 34.1
         },
         {
           month: "Jul 2020",
           nps: 64.7,
           ppf: 9.9,
+          fd: 1.9,
           diy: 31.1
         },
         {
           month: "Aug 2020",
           nps: 55.7,
           ppf: 3.9,
+          fd: 1.9,
           diy: 14.1
         },
       ],
@@ -97,48 +105,56 @@ const data = [
           month: "Jan 2020",
           nps: 59.7,
           ppf: 3.9,
+          fd: 1.9,
           diy: 37.1
         },
         {
           month: "Feb 2020",
           nps: 16.7,
           ppf: 4.9,
+          fd: 1.9,
           diy: 34.1
         },
         {
           month: "Mar 2020",
           nps: 64.7,
           ppf: 9.9,
+          fd: 1.9,
           diy: 31.1
         },
         {
           month: "Apr 2020",
           nps: 55.7,
           ppf: 3.9,
+          fd: 1.9,
           diy: 14.1
         },
         {
           month: "May 2020",
           nps: 20.7,
           ppf: 1.9,
+          fd: 1.9,
           diy: 14.1
         },
         {
           month: "Jun 2020",
           nps: 76.7,
           ppf: 9.9,
+          fd: 1.9,
           diy: 74.1
         },
         {
           month: "Jul 2020",
           nps: 10.7,
           ppf: 6.9,
+          fd: 1.9,
           diy: 54.1
         },
         {
           month: "Aug 2020",
           nps: 88.7,
           ppf: 2.9,
+          fd: 1.9,
           diy: 92.1
         },
       ],
