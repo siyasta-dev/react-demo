@@ -41,7 +41,7 @@ export default function RenderLineChart() {
                 bottom: 20,
                 left: 20,
                 }}
-                barSize={30}
+                barSize={20}
                 barGap={0}
             >
                 <XAxis dataKey="month" strokeDasharray="3 3" tickLine={false} angle={-90} tickMargin={30} tickFormatter={(tick) => (tick.split(" ")[0])} />
