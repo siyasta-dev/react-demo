@@ -46,9 +46,7 @@ export default function RenderLineChart() {
             >
                 <XAxis dataKey="month" strokeDasharray="3 3" tickLine={false} angle={-90} tickMargin={30} tickFormatter={(tick) => (tick.split(" ")[0])} />
                 <YAxis yAxisId="left" orientation="left" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} >
-                    <Label style={{ fontWeight: 'bold' }} angle={-90} position="insideLeft" offset={-5}>
-                        Customers
-                    </Label>
+                    <Label value="Customers" style={{ fontWeight: 'bold' }} angle={-90} position="insideLeft" offset={-5} />
                 </YAxis>
                 <YAxis yAxisId="right" orientation="right" strokeDasharray="3 3" unit="%" tickLine={false} tickMargin={10} />
                 <Legend formatter={(value) => value.toUpperCase()} verticalAlign="top" />
